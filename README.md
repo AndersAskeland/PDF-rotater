@@ -1,2 +1,2 @@
 # PDF-rotater
-Simple GUI application to rotate PDF pages.
+Simple GUI application to individually rotate PDF pages.
