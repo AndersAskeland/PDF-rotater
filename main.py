@@ -14,6 +14,8 @@
 import sys
 from PySide6.QtWidgets import QMainWindow, QApplication
 from PySide6.QtCore import QSize
+from PyPDF2 import PdfFileReader
+from pathlib import Path
 
 # UI files
 from UI.ui_mainwindow import Ui_MainWindow
@@ -45,6 +47,13 @@ class MainWindow(QMainWindow):
         window_size = QSize(1100, 720)
         self.resize(window_size)
         self.setMinimumSize(window_size)
+
+# PDF stuff
+
+# Set path
+pdf_path = ("PDFs")
+
+print()
 
 
 

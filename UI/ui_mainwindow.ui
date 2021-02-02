@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>786</height>
+    <width>806</width>
+    <height>1006</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -31,12 +31,17 @@
      <number>0</number>
     </property>
     <item>
-     <widget class="QFrame" name="frame">
+     <widget class="QFrame" name="frame_top">
       <property name="maximumSize">
        <size>
         <width>16777215</width>
         <height>150</height>
        </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame{
+	background-color: rgb(27, 29, 35);
+}</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::NoFrame</enum>
@@ -55,28 +60,75 @@
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
-           <widget class="QFrame" name="frame_logo">
+           <widget class="QLabel" name="label_2">
             <property name="maximumSize">
              <size>
               <width>100</width>
               <height>16777215</height>
              </size>
             </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>../../Github - FreezeDB/graphics/logo.png</pixmap>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_9">
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_logo">
-            <property name="text">
-             <string>PDF rotater
-A simple PDF rotater using ****. PDF 
+            <layout class="QVBoxLayout" name="verticalLayout_5">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_logo">
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+	color: rgb(201, 202, 204);
+	font-size: 40px;
+}
+</string>
+               </property>
+               <property name="text">
+                <string>PDF rotater</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+	color: rgb(201, 202, 204);
+	font-size: 15px;
+}
+</string>
+               </property>
+               <property name="text">
+                <string>Simple PDF rotater using ****. PDF 
 state is automatically saved.</string>
-            </property>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </widget>
           </item>
          </layout>
@@ -97,18 +149,150 @@ state is automatically saved.</string>
           <enum>QFrame::Raised</enum>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="spacing">
+           <number>0</number>
+          </property>
           <item>
-           <widget class="QLabel" name="label_tree_files">
-            <property name="text">
-             <string>TextLabel</string>
+           <widget class="QFrame" name="frame_5">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
             </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_tree_files">
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+	color: rgb(201, 202, 204);
+	font-size: 15px;
+}
+</string>
+               </property>
+               <property name="text">
+                <string>PDF files</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton">
+               <property name="text">
+                <string>Folder</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </widget>
           </item>
           <item>
            <widget class="QTreeWidget" name="tree_files">
+            <property name="styleSheet">
+             <string notr="true">/* Main widget */
+QTableWidget {	
+	background-color: rgb(39, 44, 54);
+	border-radius: 10px;
+ 	gridline-color: rgb(201, 202, 204);
+	border-bottom: 1px solid rgb(44, 49, 60);
+}
+
+
+
+/* Items  */
+QTableWidget::item{
+	border-color: rgb(44, 49, 60);
+	padding-left: 2px;
+	padding-right: 2px;
+	color: #FFFFFF;
+
+
+}
+
+QTableWidget::item:selected{
+	background-color: rgb(85, 170, 255);
+}
+
+
+
+
+
+/* Scroll bars */
+
+QScrollBar:horizontal {
+    border: none;
+    background: rgb(52, 59, 72);
+    height: 14px;
+    margin: 0px 21px 0 21px;
+	border-radius: 0px;
+}
+
+QScrollBar:vertical {
+	border: none;
+    background: rgb(52, 59, 72);
+    width: 14px;
+    margin: 21px 0 21px 0;
+	border-radius: 0px;
+ }
+
+
+
+
+
+/* Per header */
+QHeaderView::section{
+	Background-color: rgb(39, 44, 54);
+	border-style: none;
+	text-align: right;
+
+
+}
+
+QTableWidget::horizontalHeader {	
+	background-color: rgb(255,255,255);
+	padding: 10px;
+	border-radius: 100px;
+	color: #34495E;
+	overflow: hidden;
+	background-color: #34495E;
+	text-align: right;
+	text-padding-left: -2px;
+
+
+}
+
+
+/* Top thing*/
+QHeaderView::section:horizontal
+{
+	background-color: rgb(255,255,255);
+	padding: 4px;
+	border-radius: 2px;
+	font-size: 15px;
+ 	color: rgb(201, 202, 204);
+	background: #34495E;
+	text-padding-left: -2px;}
+
+
+</string>
+            </property>
             <column>
              <property name="text">
-              <string notr="true">1</string>
+              <string>Name</string>
              </property>
             </column>
            </widget>
@@ -120,7 +304,12 @@ state is automatically saved.</string>
      </widget>
     </item>
     <item>
-     <widget class="QFrame" name="frame_2">
+     <widget class="QFrame" name="frame_bottom">
+      <property name="styleSheet">
+       <string notr="true">QFrame{
+background-color: rgb(42,49,61);
+}</string>
+      </property>
       <property name="frameShape">
        <enum>QFrame::NoFrame</enum>
       </property>
@@ -152,6 +341,13 @@ state is automatically saved.</string>
           </item>
           <item>
            <widget class="QLabel" name="label_3">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+	color: rgb(201, 202, 204);
+	font-size: 15px;
+}
+</string>
+            </property>
             <property name="text">
              <string>Page * / *</string>
             </property>
@@ -186,7 +382,15 @@ state is automatically saved.</string>
            <number>100</number>
           </property>
           <item>
-           <widget class="QGraphicsView" name="graphicsView_pdf"/>
+           <widget class="QGraphicsView" name="graphicsView_pdf">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255,255,255);
+border-radius: 20px;</string>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+           </widget>
           </item>
          </layout>
         </widget>
@@ -227,7 +431,7 @@ state is automatically saved.</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>806</width>
      <height>24</height>
     </rect>
    </property>
